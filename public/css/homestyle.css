@@ -1,0 +1,22 @@
+
+
+.section{
+	 margin: 0;
+     background: url('/img/offroad2.png');
+     background-size:100% auto;
+     background-repeat:no-repeat;
+     display: compact;
+     height: 570px;
+}
+
+.lead {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 30px;
+  
+  padding: 25px 20px;
+  border-radius: 6px;
+  text-align: center;
+}

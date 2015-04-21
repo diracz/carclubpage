@@ -28,6 +28,11 @@
             controller: 'OffRoadController'
         })
 
+        .when('/rally', {
+            templateUrl: 'views/rally.html',
+            controller: 'RallyController'
+        })
+
         // nerds page that will use the NerdController
         .when('/nerds', {
             templateUrl: 'views/nerd.html',

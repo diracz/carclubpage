@@ -1,8 +1,12 @@
 <!-- public/index.html -->
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Zuck Li">
     <base href="/">
 
     <title>美西北车迷俱乐部</title>
@@ -10,6 +14,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+    <link rel="stylesheet" href="/ss/font-awesome.css"> <!-- awesome fonts http://fortawesome.github.com/Font-Awesome/ -->
 
     <!-- JS -->
     <script src="libs/angular/angular.min.js"></script>
@@ -20,39 +25,45 @@
     <script src="js/controllers/AutoXCtrl.js"></script>
     <script src="js/controllers/TrackCtrl.js"></script>
     <script src="js/controllers/OffRoadCtrl.js"></script>
+    <script src="js/controllers/RallyCtrl.js"></script>
     <script src="js/controllers/NerdCtrl.js"></script>
 
     <script src="js/services/NerdService.js"></script>
     <script src="js/appRoutes.js"></script>
     <script src="js/app.js"></script>
 </head>
-<body ng-app="sampleApp" ng-controller="NerdController">
-<div class="container">
+
+<body ng-app="sampleApp">
+    <div class="container">
 
     <!-- HEADER -->
     <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/">主页：美西北车迷俱乐部</a>
+            <a class="navbar-brand" href="/"><div align="center"><span class="glyphicon glyphicon-home"></span> 美西北车迷俱乐部</div></a>
         </div>
 
         <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
         <ul class="nav navbar-nav">
-            <li><a href="/autox">AutoCross</a></li>
+            <li><a href="/autox"><div align="center">场地障碍 AutoCross</div></a></li>
+            <li><a href="/track"><div align="center">赛道 Track</div></a></li>
+            <li><a href="/offroad"><div align="center">越野 Off-road</div></a></li>
+            <li><a href="/rally"><div align="center">拉力赛 Rally</div></a></li>
         </ul>
-        <ul class="nav navbar-nav">
-            <li><a href="/track">赛道</a></li>
-        </ul>
-        <ul class="nav navbar-nav">
-            <li><a href="/offroad">越野</a></li>
-        </ul>
-        <ul class="nav navbar-nav">
-            <li><a href="/nerds">nerd</a></li>
-        </ul>
-    </nav>
 
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/"><span class="glyphicon glyphicon-user"></span> 关于我们</a></li>
+        </ul>
+      </div>
+    </nav>
+    <hr>
     <!-- ANGULAR DYNAMIC CONTENT -->
     <div ng-view></div>
 
-</div>
+    <div class="footer">
+        <p>&copy; Zuck Li  2015</p>
+    </div>
+    
+    </div> <!--container-->
 </body>
 </html>
